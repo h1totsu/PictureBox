@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ua.h1totsu.entity.User" table="user" catalog="imagedb">
+        <id name="userId" column="user_id" type="integer">
+            <generator class="increment" />
+        </id>
+        <property name="login" column="login" type="string" />
+        <property name="email" column="email" type="string" />
+        <property name="password" column="password" type="string" />
+        <property name="avatar" column="avatar" type="text" />
+
+        <set name="images" table="image" lazy="true" cascade="all">
+            <key column="user_id" />
+            <one-to-many class="ua.h1totsu.entity.Image" />
+        </set>
+
+        <set name="favorites" table="user_image" lazy="true" cascade="all">
+            <key column="user_id" />
+            <many-to-many column="image_id" class="ua.h1totsu.entity.Image" />
+        </set>
+    </class>
+</hibernate-mapping>

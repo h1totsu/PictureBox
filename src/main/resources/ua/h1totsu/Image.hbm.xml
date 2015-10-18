@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ua.h1totsu.entity.Image" table="image" catalog="imagedb">
+        <id name="imageId" column="image_id" type="integer">
+            <generator class="increment" />
+        </id>
+        <property name="description" column="description" type="string" />
+        <property name="date" column="date" type="date" />
+
+        <set name="comments" table="comment" lazy="true" cascade="all">
+            <key column="image_id" />
+            <one-to-many class="ua.h1totsu.entity.Comment" />
+        </set>
+
+        <set name="tags" table="image_tag" cascade="all" lazy="extra">
+            <key column="image_id" />
+            <many-to-many column="tag_id" class="ua.h1totsu.entity.Tag" />
+        </set>
+
+        <set name="users" table="user_image" lazy="true" cascade="all">
+            <key column="image_id" />
+            <many-to-many column="user_id" class="ua.h1totsu.entity.User" />
+        </set>
+
+        <property name="img" column="img" type="text" />
+        <property name="likeCount" column="like_count" type="integer" />
+        <property name="loadCount" column="load_count" type="integer" />
+        <property name="userId" column="user_id" type="integer" />
+    </class>
+</hibernate-mapping>

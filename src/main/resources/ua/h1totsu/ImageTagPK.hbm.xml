@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ua.h1totsu.entity.ImageTagPK" table="image_tag" catalog="imagedb">
+        <composite-id mapped="true" class="ua.h1totsu.entity.ImageTagPK">
+            <key-property name="imageId" column="image_id"/>
+            <key-property name="tagId" column="tag_id"/>
+        </composite-id>
+    </class>
+</hibernate-mapping>

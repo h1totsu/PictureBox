@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ua.h1totsu.entity.Tag" table="tag" catalog="imagedb">
+        <id name="tagId" column="tag_id" type="integer">
+            <generator class="increment" />
+        </id>
+        <property name="tag" column="tag_name" type="string" />
+        <!--<set name="images" table="image_tag" lazy="true" cascade="all">-->
+            <!--<key column="tag_id" />-->
+            <!--<many-to-many column="image_id" class="ua.h1totsu.entity.Image" />-->
+        <!--</set>-->
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - imagedb@localhost" uuid="e53c741b-6426-433c-b87e-92ca91d90c63">
+    <database-info product="MySQL" version="5.6.26-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="imagedb"/>
+    <table name="comment" schema="" catalog="imagedb" type="TABLE">
+      <column name="comment_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="comment" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="comment_id"/>
+      <foreign-key name="FK_comm_img" columns="image_id" ref-table="image" ref-schema="" ref-catalog="imagedb" ref-columns="image_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="FKcyfbf6542oxvebsdgr5fcd4uq" unique="false" columns="image_id"/>
+    </table>
+    <table name="image" schema="" catalog="imagedb" type="TABLE">
+      <column name="image_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="img" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="like_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="load_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="image_id"/>
+      <foreign-key name="FK_img_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="imagedb" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FKlxnnh0ir05khn8iu9tgwh1yyk" columns="user_id" ref-table="user" ref-schema="" ref-catalog="imagedb" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_comm_img" table="comment" schema="" catalog="imagedb" columns="image_id"/>
+      <exported-key name="FK_tag_img" table="image_tag" schema="" catalog="imagedb" columns="image_id"/>
+      <exported-key name="FK_us_img" table="user_image" schema="" catalog="imagedb" columns="image_id"/>
+      <index name="FK_img_user_idx" unique="false" columns="user_id"/>
+    </table>
+    <table name="image_tag" schema="" catalog="imagedb" type="TABLE">
+      <column name="image_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tag_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="image_id,tag_id"/>
+      <foreign-key name="FK_img_tag" columns="tag_id" ref-table="tag" ref-schema="" ref-catalog="imagedb" ref-columns="tag_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_tag_img" columns="image_id" ref-table="image" ref-schema="" ref-catalog="imagedb" ref-columns="image_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="FK_img_tag_idx" unique="false" columns="tag_id"/>
+    </table>
+    <table name="tag" schema="" catalog="imagedb" type="TABLE">
+      <column name="tag_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tag_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tag_id"/>
+      <exported-key name="FK_img_tag" table="image_tag" schema="" catalog="imagedb" columns="tag_id"/>
+    </table>
+    <table name="user" schema="" catalog="imagedb" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="login" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="avatar" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <exported-key name="FK_img_user" table="image" schema="" catalog="imagedb" columns="user_id"/>
+      <exported-key name="FKlxnnh0ir05khn8iu9tgwh1yyk" table="image" schema="" catalog="imagedb" columns="user_id"/>
+      <exported-key name="FK_im_user" table="user_image" schema="" catalog="imagedb" columns="user_id"/>
+    </table>
+    <table name="user_image" schema="" catalog="imagedb" type="TABLE">
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="image_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="user_id,image_id"/>
+      <foreign-key name="FK_im_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="imagedb" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_us_img" columns="image_id" ref-table="image" ref-schema="" ref-catalog="imagedb" ref-columns="image_id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="FK_fav_img_idx" unique="false" columns="image_id"/>
+    </table>
+  </data-source>
+</component>

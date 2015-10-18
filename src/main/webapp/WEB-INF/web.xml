@@ -1,0 +1,59 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+    <filter>
+        <filter-name>LogoutFilter</filter-name>
+        <filter-class>ua.h1totsu.controllers.filters.LogoutFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>MainContentFilter</filter-name>
+        <filter-class>ua.h1totsu.controllers.filters.MainContentFilter</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>LogoutFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MainContentFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>ua.h1totsu.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>ua.h1totsu.controllers.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserPage</servlet-name>
+        <jsp-file>/userPage.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ImagePageServlet</servlet-name>
+        <servlet-class>ua.h1totsu.controllers.ImagePageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserPage</servlet-name>
+        <url-pattern>/userpage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImagePageServlet</servlet-name>
+        <url-pattern>/images</url-pattern>
+    </servlet-mapping>
+</web-app>
