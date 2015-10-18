@@ -36,7 +36,6 @@ public class UploadServlet extends HttpServlet {
                         img = item.get();
                     }
                 }
-
                 Image image = new Image(paramMap.get("description"), new Date());
                 image.setTags(Tag.setTagsFromString(paramMap.get("tags")));
                 image.setImg(Base64.getEncoder().encodeToString(img));

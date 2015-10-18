@@ -3,7 +3,6 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-
     <filter>
         <filter-name>LogoutFilter</filter-name>
         <filter-class>ua.h1totsu.controllers.filters.LogoutFilter</filter-class>
@@ -12,7 +11,6 @@
         <filter-name>MainContentFilter</filter-name>
         <filter-class>ua.h1totsu.controllers.filters.MainContentFilter</filter-class>
     </filter>
-
 
     <filter-mapping>
         <filter-name>LogoutFilter</filter-name>
@@ -39,6 +37,10 @@
         <servlet-name>ImagePageServlet</servlet-name>
         <servlet-class>ua.h1totsu.controllers.ImagePageServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PaginationServlet</servlet-name>
+        <servlet-class>ua.h1totsu.controllers.PaginationServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>AuthServlet</servlet-name>
@@ -55,5 +57,9 @@
     <servlet-mapping>
         <servlet-name>ImagePageServlet</servlet-name>
         <url-pattern>/images</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaginationServlet</servlet-name>
+        <url-pattern>/pagination</url-pattern>
     </servlet-mapping>
 </web-app>

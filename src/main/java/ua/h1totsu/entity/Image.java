@@ -19,11 +19,15 @@ public class Image {
     private Integer userId;
 
     public Image() {
+        this.likeCount = 0;
+        this.loadCount = 0;
     }
 
     public Image(String description, Date date) {
         this.description = description;
         this.date = date;
+        this.likeCount = 0;
+        this.loadCount = 0;
     }
 
     public Integer getImageId() {

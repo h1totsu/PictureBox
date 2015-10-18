@@ -94,116 +94,125 @@
 </section>
 
 <header class="header">
-    <a class="page-link" href="#">1</a>
 </header>
 
 <section class="main-content">
     <div class="grid clearfix">
-        <div class="column-3">
-            <a class="link" href="#">
-                <div class="image" style="background-image: url('images/img1.jpg');"></div>
-                <div class="info-panel clearfix">
-                    <div class="date">03.10.2015</div>
-                    <div class="services clearfix">
-                        <div class="service views">
-                            <i class="fa fa-eye"></i>
-                            43
-                        </div><!-- end of .service -->
-                        <div class="service likes">
-                            <i class="fa fa-heart"></i>
-                            10
-                        </div><!-- end of .service -->
-                        <div class="service downloads">
-                            <i class="fa fa-cloud-download"></i>
-                            4
-                        </div><!-- end of .service -->
-                    </div><!-- end of .services -->
-                </div><!-- end of .info-panel -->
-            </a>
-            <div class="popup-content clearfix">
-                <div class="close">
-                    <i class="fa fa-close"></i>
-                </div>
-                <div class="image">
-                    <img src="images/img1.jpg" alt="Image name"/>
-                </div>
-                <div class="info-panel clearfix">
-                    <div class="author">
-                        Added by
-                        <a href="#" class="name">Adell</a>
-                        on <span class="date">03.10.2015</span>
-                    </div>
-                    <div class="services clearfix">
-                        <div class="service views">
-                            <i class="fa fa-eye"></i>
-                            43
-                        </div><!-- end of .service -->
-                        <div class="service likes">
-                            <i class="fa fa-heart"></i>
-                            10
-                        </div><!-- end of .service -->
-                        <div class="service downloads">
-                            <i class="fa fa-cloud-download"></i>
-                            4
-                        </div><!-- end of .service -->
-                    </div><!-- end of .services -->
-                </div><!-- end of .info-panel -->
-                <div class="info">
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Asperiores eos harum molestias nihil porro recusandae rem tempore?
-                    </p>
-                    <div class="tags">
-                        <a href="#">#sea</a>
-                        <a href="#">#friends</a>
-                        <a href="#">#USA</a>
-                        <a href="#">#ice-cream</a>
-                        <a href="#">#hot</a>
-                        <a href="#">#weekend</a>
-                    </div>
-                </div>
-                <div class="actions clearfix">
-                    <a href="#" class="like">
-                        <i class="fa fa-heart"></i>
-                        Add to Favorites
-                    </a>
-                    <a href="#" class="download">
-                        <i class="fa fa-cloud-download"></i>
-                        Download
-                    </a>
-                </div>
-                <div class="clearfix"></div>
-                <div class="comments">
-                    <h4 class="comments-title">Comments</h4>
-                    <div class="comment clearfix">
-                        <div class="comment-text">Покупал для ребенка переговариваться во время велосипедных прогулок. Отлично за такие деньги. Ведь практически все рации (для кот не требуется разрешение Укрчастотнагляда) все равно работают в одном частотном диапазоне, одинаковая выходная мощность до 0,5 Вт. Везде 8 открытых каналов и одинаковый тип модуляции.</div>
-                        <div class="author clearfix">
-                            <img class="photo" src="images/profile.jpg" alt="Author"/>
-                            <div class="text">
-                                <a href="#" class="name">Viktoria Beckham</a>
-                                <div class="date">10.10.2015</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment clearfix">
-                        <div class="comment-text">Везде 8 открытых каналов и одинаковый тип модуляции.</div>
-                        <div class="author clearfix">
-                            <img class="photo" src="images/profile.jpg" alt="Author"/>
-                            <div class="text">
-                                <a href="#" class="name">Viktoria Beckham</a>
-                                <div class="date">10.10.2015</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- end of .popup-content -->
-        </div>
+        <%--<div class="column-3">--%>
+            <%--<a class="link" href="#">--%>
+                <%--<div class="image" style="background-image: url('images/img1.jpg');"></div>--%>
+                <%--<div class="info-panel clearfix">--%>
+                    <%--<div class="date">03.10.2015</div>--%>
+                    <%--<div class="services clearfix">--%>
+                        <%--<div class="service views">--%>
+                            <%--<i class="fa fa-eye"></i>--%>
+                            <%--43--%>
+                        <%--</div><!-- end of .service -->--%>
+                        <%--<div class="service likes">--%>
+                            <%--<i class="fa fa-heart"></i>--%>
+                            <%--10--%>
+                        <%--</div><!-- end of .service -->--%>
+                        <%--<div class="service downloads">--%>
+                            <%--<i class="fa fa-cloud-download"></i>--%>
+                            <%--4--%>
+                        <%--</div><!-- end of .service -->--%>
+                    <%--</div><!-- end of .services -->--%>
+                <%--</div><!-- end of .info-panel -->--%>
+            <%--</a>--%>
+            <%--<div class="popup-content clearfix">--%>
+                <%--<div class="close">--%>
+                    <%--<i class="fa fa-close"></i>--%>
+                <%--</div>--%>
+                <%--<div class="image">--%>
+                    <%--<img src="images/img1.jpg" alt="Image name"/>--%>
+                <%--</div>--%>
+                <%--<div class="info-panel clearfix">--%>
+                    <%--<div class="author">--%>
+                        <%--Added by--%>
+                        <%--<a href="#" class="name">Adell</a>--%>
+                        <%--on <span class="date">03.10.2015</span>--%>
+                    <%--</div>--%>
+                    <%--<div class="services clearfix">--%>
+                        <%--<div class="service views">--%>
+                            <%--<i class="fa fa-eye"></i>--%>
+                            <%--43--%>
+                        <%--</div><!-- end of .service -->--%>
+                        <%--<div class="service likes">--%>
+                            <%--<i class="fa fa-heart"></i>--%>
+                            <%--10--%>
+                        <%--</div><!-- end of .service -->--%>
+                        <%--<div class="service downloads">--%>
+                            <%--<i class="fa fa-cloud-download"></i>--%>
+                            <%--4--%>
+                        <%--</div><!-- end of .service -->--%>
+                    <%--</div><!-- end of .services -->--%>
+                <%--</div><!-- end of .info-panel -->--%>
+                <%--<div class="info">--%>
+                    <%--<p class="description">--%>
+                        <%--Lorem ipsum dolor sit amet, consectetur adipisicing elit.--%>
+                        <%--Asperiores eos harum molestias nihil porro recusandae rem tempore?--%>
+                    <%--</p>--%>
+                    <%--<div class="tags">--%>
+                        <%--<a href="#">#sea</a>--%>
+                        <%--<a href="#">#friends</a>--%>
+                        <%--<a href="#">#USA</a>--%>
+                        <%--<a href="#">#ice-cream</a>--%>
+                        <%--<a href="#">#hot</a>--%>
+                        <%--<a href="#">#weekend</a>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="actions clearfix">--%>
+                    <%--<a href="#" class="like">--%>
+                        <%--<i class="fa fa-heart"></i>--%>
+                        <%--Add to Favorites--%>
+                    <%--</a>--%>
+                    <%--<a href="#" class="download">--%>
+                        <%--<i class="fa fa-cloud-download"></i>--%>
+                        <%--Download--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+                <%--<div class="clearfix"></div>--%>
+                <%--<div class="comments">--%>
+                    <%--<h4 class="comments-title">Comments</h4>--%>
+                    <%--<div class="comment clearfix">--%>
+                        <%--<div class="comment-text">Покупал для ребенка переговариваться во время велосипедных прогулок. Отлично за такие деньги. Ведь практически все рации (для кот не требуется разрешение Укрчастотнагляда) все равно работают в одном частотном диапазоне, одинаковая выходная мощность до 0,5 Вт. Везде 8 открытых каналов и одинаковый тип модуляции.</div>--%>
+                        <%--<div class="author clearfix">--%>
+                            <%--<img class="photo" src="images/profile.jpg" alt="Author"/>--%>
+                            <%--<div class="text">--%>
+                                <%--<a href="#" class="name">Viktoria Beckham</a>--%>
+                                <%--<div class="date">10.10.2015</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="comment clearfix">--%>
+                        <%--<div class="comment-text">Везде 8 открытых каналов и одинаковый тип модуляции.</div>--%>
+                        <%--<div class="author clearfix">--%>
+                            <%--<img class="photo" src="images/profile.jpg" alt="Author"/>--%>
+                            <%--<div class="text">--%>
+                                <%--<a href="#" class="name">Viktoria Beckham</a>--%>
+                                <%--<div class="date">10.10.2015</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div><!-- end of .popup-content -->--%>
+        <%--</div>--%>
 
     </div>
 </section>
 
 <footer class="footer">
-
+    <div class="pagination">
+        <%--<a class="page-link outside" href="/images?page=1">First</a>--%>
+        <%--<a class="page-link" href="/images?page=1">1</a>--%>
+        <%--<a class="page-link" href="#">2</a>--%>
+        <%--<a class="page-link" href="#">3</a>--%>
+        <%--<a class="page-link" href="#">4</a>--%>
+        <%--<span class="page-link">...</span>--%>
+        <%--<a class="page-link" href="#">5</a>--%>
+        <%--<a class="page-link" href="#">6</a>--%>
+        <%--<a class="page-link outside" href="#">Last</a>--%>
+    </div>
 </footer>
 
 
